@@ -11,10 +11,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
-    <title>Gerador de número</title>
+    <title>Sorteador de número</title>
   </head>
   <body>
-    <h1 class="text-4xl">Gerador de número</h1>
+    <div class="text-center mt-8">
+      <h1 class="text-5xl font-bold">Sorteador de número</h1>
+
+      <form class="form mt-10">
+        <div class="flex justify-center flex-wrap gap-6">
+          <div>
+            <label class="text-lg" for="from-number">De</label>
+            <input
+              required
+              min="1"
+              class="text-lg text-gray-100 bg-gray-700 rounded-xl w-15 ml-1 px-2.5 py-2"
+              type="number"
+              id="from-number"
+              value="1"
+            />
+          </div>
+
+          <div>
+            <label class="text-lg" for="to-number">Até</label>
+            <input
+              required
+              min="1"
+              class="text-lg text-gray-100 bg-gray-700 rounded-xl w-15 ml-1 px-2.5 py-2"
+              type="number"
+              id="to-number"
+              value="50"
+            />
+          </div>
+        </div>
+
+        <button
+          class="btn-sub bg-gray-700 text-lg rounded-xl mt-8 px-2.5 py-2 hover:bg-gray-800 transition-colors"
+          type="submit"
+        >
+          Sortear número
+        </button>
+      </form>
+
+      <div class="result mt-12 text-4xl"></div>
+    </div>
 
     <script src="./script.js"></script>
   </body>
